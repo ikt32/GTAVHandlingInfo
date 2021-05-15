@@ -1,0 +1,392 @@
+{
+	"version":"1.0",
+	"flags": {
+		"strModelFlags": [{
+				"name": "IS_VAN",
+				"description": "Allows double doors for the rear doors animation."
+			},
+			{
+				"name": "IS_BUS",
+				"description": "Uses bus animations for entry/exit."
+			},
+			{
+				"name": "IS_LOW",
+				"description": "Uses animations suitable for cars with a low ride-height."
+			},
+			{
+				"name": "IS_BIG",
+				"description": "Changes the way that the AI drives around corners."
+			},
+			{
+				"name": "ABS_STD",
+				"description": "Arcade Anti-Lock Braking System (ABS) equipped as standard; minimal slip allowed."
+			},
+			{
+				"name": "ABS_OPTION",
+				"description": "Arcade Anti-Lock Braking System (ABS) equipped w/ brakes upgrade."
+			},
+			{
+				"name": "ABS_ALT_STD",
+				"description": "Realistic Anti-Lock Braking System (ABS) equipped as standard; some slip allowed."
+			},
+			{
+				"name": "ABS_ALT_OPTION",
+				"description": "Realistic Anti-Lock Braking System (ABS) equipped w/brakes upgrade."
+			},
+			{
+				"name": "NO_DOORS",
+				"description": "For vehicles that don't have any operable doors."
+			},
+			{
+				"name": "TANDEM_SEATS",
+				"description": "Two people will use the front passenger seat."
+			},
+			{
+				"name": "SIT_IN_BOAT",
+				"description": "Uses seated boat animation instead of standing."
+			},
+			{
+				"name": "HAS_TRACKS",
+				"description": "For vehicles with tracks instead of tires."
+			},
+			{
+				"name": "NO_EXHAUST",
+				"description": "Removes all exhaust particles."
+			},
+			{
+				"name": "DOUBLE_EXHAUST",
+				"description": "Creates a second exhaust by mirroring the model's exhaust over the y-axis."
+			},
+			{
+				"name": "NO1FPS_LOOK_BEHIND",
+				"description": "Prevents player using rear view when in first-person mode."
+			},
+			{
+				"name": "CAN_ENTER_IF_NO_DOOR",
+				"description": "Allows entry into the vehicle despite no currently accessible doors."
+			},
+			{
+				"name": "AXLE_F_TORSION",
+				"description": "Front wheels stay vertical to the car."
+			},
+			{
+				"name": "AXLE_F_SOLID",
+				"description": "Front wheels stay parallel to each other."
+			},
+			{
+				"name": "AXLE_F_MCPHERSON",
+				"description": "Front wheels can tilt."
+			},
+			{
+				"name": "ATTACH_PED_TO_BODYSHELL",
+				"description": "???"
+			},
+			{
+				"name": "AXLE_R_TORSION",
+				"description": "Rear wheels stay vertical to the car."
+			},
+			{
+				"name": "AXLE_R_SOLID",
+				"description": "Rear wheels stay parallel to each other."
+			},
+			{
+				"name": "AXLE_R_MCPHERSON",
+				"description": "Rear wheels can tilt."
+			},
+			{
+				"name": "DONT_FORCE_GRND_CLEARANCE",
+				"description": "Bumper bones can clip through objects/terrain that are normally too high."
+			},
+			{
+				"name": "DONT_RENDER_STEER",
+				"description": "Does not render steering animations."
+			},
+			{
+				"name": "NO_WHEEL_BURST",
+				"description": "Has Bulletproof Tires as standard."
+			},
+			{
+				"name": "INDESTRUCTIBLE",
+				"description": "Can't explode or be considered inoperable from damage."
+			},
+			{
+				"name": "DOUBLE_FRONT_WHEELS",
+				"description": "Places a second instance of each front wheel next to the normal one."
+			},
+			{
+				"name": "RC",
+				"description": "For RC vehicles such as the RC Bandito and Invade & Persuade Tank."
+			},
+			{
+				"name": "DOUBLE_RWHEELS",
+				"description": "Places a second instance of each rear wheel next to the normal one."
+			},
+			{
+				"name": "MF_NO_WHEEL_BREAK",
+				"description": "Prevents wheel bones from detaching off the vehicle due to damage."
+			},
+			{
+				"name": "IS_HATCHBACK",
+				"description": "Uses animations suitable for Trunk doors on hatchback-style vehicle bodies."
+			}
+		],
+		"strHandlingFlags": [{
+				"name": "SMOOTH_COMPRESN",
+				"description": "Simulates progressive spring suspension. Makes suspension compression motion smoother."
+			},
+			{
+				"name": "REDUCED_MOD_MASS",
+				"description": "Reduces mass added from upgrades."
+			},
+			{
+				"name": "_DISABLE_HORN",
+				"description": "Disables horn. Used on vehicles with KERS."
+			},
+			{
+				"name": "OFFROAD_ABILITY3",
+				"description": "Inverts the way grip works on the vehicle; with this flag enabled, grip starts at the fTractionCurveMin value and may increase up to the fTractionCurveMax value upon wheel slip. Grip stays at max beyond the vehicle's peak slip angle."
+			},
+			{
+				"name": "NO_HANDBRAKE",
+				"description": "Disables handbrake control for the vehicle."
+			},
+			{
+				"name": "STEER_REARWHEELS",
+				"description": "Steers the rear wheels instead of the front."
+			},
+			{
+				"name": "HB_REARWHEEL_STEER",
+				"description": "Handbrake control makes the rear wheels steer as well as the front."
+			},
+			{
+				"name": "STEER_ALL_WHEELS",
+				"description": "Steers all wheels, similar to 4-wheel-steering systems found on real vehicles. The rear wheels will steer at the same lock angle as the front, as defined by fSteeringLock."
+			},
+			{
+				"name": "FREEWHEEL_NO_GAS",
+				"description": "Disables engine-braking when no throttle is applied."
+			},
+			{
+				"name": "NO_REVERSE",
+				"description": "Disables reversing for the vehicle."
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "STEER_NO_WHEELS",
+				"description": "Disables steering on all wheels, used with tracked vehicles."
+			},
+			{
+				"name": "CVT",
+				"description": "Gives the vehicle a fixed-ratio transmission with a gear ratio of 0.90, used for vehicles with nInitialDriveGears=1. If gears amount to more than 1, it will simply force the vehicle into top gear upon acceleration. Recommended for electric vehicles."
+			},
+			{
+				"name": "ALT_EXT_WHEEL_BOUNDS_BEH",
+				"description": "???"
+			},
+			{
+				"name": "DONT_RAISE_BOUNDS_AT_SPEED",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "LESS_SNOW_SINK",
+				"description": "Less grip loss from deep mud/snow, most notably in North Yankton."
+			},
+			{
+				"name": "TYRES_CAN_CLI",
+				"description": "Tires are allowed to clip into the pavement when under enough pressure, effectiveness depends on tire sidewall. Generally makes the vehicle deal with uneven terrain better. Notes: this is the reason Offroad Tires improve performance on specific vehicles made by R*."
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "HEAVY_VEHICLE",
+				"description": "???"
+			},
+			{
+				"name": "OFFROAD_ABILITY",
+				"description": "Scaled version of 00800000; similar effects, least power."
+			},
+			{
+				"name": "OFFROAD_ABILITY2",
+				"description": "Scaled version of 00800000; similar effects, less power."
+			},
+			{
+				"name": "HF_TYRES_RAISE_SIDE_IMPACT_THRESHOLD",
+				"description": "Includes the tires in the general side collision hitbox of the vehicle. Recommended for vehicles whose wheels extend beyond the bodywork, like monster-trucks."
+			},
+			{
+				"name": "INCREASED_GRAVITY",
+				"description": "Includes bush-collision immunity, flat grip increase proportional to slip angle/lateral velocity, increased vehicle gravity."
+			},
+			{
+				"name": "ENABLE_LEAN",
+				"description": "??? Notes: Possibly for motorcycle leaning or boat leaning."
+			},
+			{
+				"name": "_ALLOW_MOTORCYCLE_TRACTION_LOSS",
+				"description": "Allows motorcycles to lose traction."
+			},
+			{
+				"name": "HEAVYARMOUR",
+				"description": "???"
+			},
+			{
+				"name": "ARMOURED",
+				"description": "???"
+			},
+			{
+				"name": "SELF_RIGHTING_IN_WATER",
+				"description": "???"
+			},
+			{
+				"name": "IMPROVED_RIGHTING_FORCE",
+				"description": "???"
+			},
+			{
+				"name": "USE_EXTRA_SOFT_SURFACE_SUS",
+				"description": "???"
+			},
+			{
+				"name": "LAST_AVAILABLE_FLAG",
+				"description": "???"
+			}
+		],
+		"strAdvancedFlags": [{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "_TRACTION_CONTROL",
+				"description": "Earlier upshifts, hard rev-limit per gear, low-speed traction control."
+			},
+			{
+				"name": "_HOLD_GEAR_LONGER",
+				"description": "Later upshifts; usually hits the gear's rev limit before shifting."
+			},
+			{
+				"name": "_STIFFER_SPRING_SPEED",
+				"description": "Anti-downforce suspension; increases suspension spring force as vehicle goes faster."
+			},
+			{
+				"name": "_FAKE_WHEELSPIN",
+				"description": "Generates fake wheelspin after an instance of real wheelspin; Tyres will stabilize and show 0.0m/s of slip with debugging data, but the traction behaves like it's still spinning."
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "_SMOOTH_REV_1ST",
+				"description": "Smooth first-gear revving; resistance to hitting the rev-limit."
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "_IGNORE_TUNED_WHEELS_CLIP",
+				"description": "Forced stock-tyre clipping boundaries, the sidewall gain/loss from a custom tyre will not matter. Refer to strHandlingFlags 00020000 above."
+			},
+			{
+				"name": "_DOWNFORCE_KERBFIX",
+				"description": "Changes the way Downforce and spoiler tuning works, uses the setup found on Open-Wheel class vehicles in the vanilla game. Each spoiler/bumper tuning has to be given some statistics. Adjusts initial downforce from fDownforceModifier. 'Curb - boosting' seems to be nullified."
+			},
+			{
+				"name": "_DECREASE_BODYROLL_TUNING",
+				"description": "Reduces body-roll if suspension upgrades are equipped."
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			},
+			{
+				"name": "???",
+				"description": "???"
+			}
+		]
+	}
+}
