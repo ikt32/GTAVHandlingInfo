@@ -95,7 +95,7 @@
 			},
 			{
 				"name": "DONT_FORCE_GRND_CLEARANCE",
-				"description": "Bumper bones can clip through objects/terrain that are normally too high."
+				"description": "Chassis COL is taken into account when suspension is compressed while hitting the ground, with sparks rendered."
 			},
 			{
 				"name": "DONT_RENDER_STEER",
@@ -119,7 +119,7 @@
 			},
 			{
 				"name": "DOUBLE_RWHEELS",
-				"description": "Places a second instance of each rear wheel next to the normal one."
+				"description": "Duplicates the skidmarks of the rear tires."
 			},
 			{
 				"name": "MF_NO_WHEEL_BREAK",
