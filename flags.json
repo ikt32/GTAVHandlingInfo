@@ -259,6 +259,135 @@
 				"description": "Most likely doesn't do anything."
 			}
 		],
+		"strDamageFlags": [{
+				"name": "DF_DRIVER_SIDE_FRONT_DOOR",
+				"description": "Marks the driver-side front door (door_dside_f) bone as non-breakable."
+			},
+			{
+				"name": "DF_DRIVER_SIDE_REAR_DOOR",
+				"description": "Marks the driver-side rear door (door_dside_r) bone as non-breakable."
+			},
+			{
+				"name": "DF_DRIVER_PASSENGER_SIDE_FRONT_DOOR",
+				"description": "Marks the passenger-side front door (door_pside_f) bone as non-breakable."
+			},
+			{
+				"name": "DF_DRIVER_PASSENGER_SIDE_REAR_DOOR",
+				"description": "Marks the passenger-side rear door (door_pside_r) bone as non-breakable."
+			},
+			{
+				"name": "DF_BONNET",
+				"description": "Marks the bonnet bone as non-breakable."
+			},
+			{
+				"name": "DF_BOOT",
+				"description": "Marks the boot bone as non-breakable."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			},
+			{
+				"name": "N/A",
+				"description": "Flag does not exist."
+			}
+		],
 		"strAdvancedFlags": [{
 				"name": "_AF_UNKNOWN_FLAG_1",
 				"description": "???"
@@ -340,7 +469,7 @@
 				"description": "Generates fake wheelspin after an instance of real wheelspin; Tyres will stabilize and show 0.0m/s of slip with debugging data, but the traction behaves like it's still spinning."
 			},
 			{
-				"name": "_AF_REDUCED_RIGHTING_FORcE",
+				"name": "_AF_REDUCED_RIGHTING_FORCE",
 				"description": "Reduces righting force of the vehicle, effectively making it much harder and slower to flip back on its wheels."
 			},
 			{
