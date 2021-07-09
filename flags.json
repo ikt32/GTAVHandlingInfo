@@ -1,5 +1,5 @@
 {
-	"version":"2.0",
+	"version":"2.1",
 	"flags": {
 		"strModelFlags": [{
 				"name": "MF_IS_VAN",
@@ -397,8 +397,8 @@
 				"description": "???"
 			},
 			{
-				"name": "_AF_SMOOTH_REV_1ST_OLD",
-				"description": "Appears to be identical to the _AF_SMOOTH_REV_1ST flag used on the Swinger. Might need more looking into."
+				"name": "_AF_ENABLE_DRIVE_BIAS_TRANSFER",
+				"description": "When enabled, transfers the drive force from the slipping wheels to the less-driven wheels."
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_4",

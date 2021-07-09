@@ -23,6 +23,11 @@ On file version increment, [Real Time Handling Editor](https://www.gta5-mods.com
 * Update descriptions for `DONT_FORCE_GRND_CLEARANCE` and `DOUBLE_RWHEELS` by GreenAid
 
 ### 2.0
+
 * Add official flag names by Wildbrick
 * Add more advanced flag research notes by Wildbrick
 * Add damage flags by Wildbrick
+
+### 2.1
+
+* Correct `strAdvancedFlags` 0x4 info (enables `fMaxDriveBiasTransfer`) by [Reactors](https://www.gta5-mods.com/users/Reactors)
