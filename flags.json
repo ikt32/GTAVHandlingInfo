@@ -449,8 +449,8 @@
 				"description": "???"
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_16",
-				"description": "???"
+				"name": "_AF_CAN_BE_STANCED",
+				"description": "Allows the vehicle to be stanced using the _SET_LOWERED_STANCE_ENABLED native. Requires the _AF_IGNORE_TUNED_WHEELS_CLIP flag to be enabled."
 			},
 			{
 				"name": "_AF_TRACTION_CONTROL",
@@ -494,7 +494,7 @@
 			},
 			{
 				"name": "_AF_IGNORE_TUNED_WHEELS_CLIP",
-				"description": "Forced stock-tyre clipping boundaries, the sidewall gain/loss from a custom tyre will not matter. Refer to strHandlingFlags 00020000 above."
+				"description": "Forced stock-tyre clipping boundaries, the sidewall gain/loss from a custom tyre will not matter. Refer to strHandlingFlags 00020000 above. Also prevents lowering the vehicle by shooting at its wheels/suspension. This flag is required in addition to '_AF_CAN_BE_STANCED' to stance the vehicle through script."
 			},
 			{
 				"name": "_AF_DOWNFORCE_KERBFIX",
@@ -506,15 +506,15 @@
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_30",
-				"description": "Likely non-existent as of b2245."
+				"description": "Likely non-existent as of b2372."
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_31",
-				"description": "Likely non-existent as of b2245."
+				"description": "Likely non-existent as of b2372."
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_32",
-				"description": "Likely non-existent as of b2245."
+				"description": "Likely non-existent as of b2372."
 			}
 		]
 	}
