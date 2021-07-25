@@ -31,3 +31,7 @@ On file version increment, [Real Time Handling Editor](https://www.gta5-mods.com
 ### 2.1
 
 * Correct `strAdvancedFlags` 0x4 info (enables `fMaxDriveBiasTransfer`) by [Reactors](https://www.gta5-mods.com/users/Reactors)
+
+### 2.2
+
+* Add `strAdvancedFlags` `_AF_CAN_BE_STANCED` from LS Tuners and update `_AF_IGNORE_TUNED_WHEELS_CLIP` by [Wildbrick142](https://github.com/Wildbrick142)
