@@ -38,7 +38,7 @@
 				"description": "For vehicles that don't have any operable doors."
 			},
 			{
-				"name": "_MF_TANDEM_SEATS",
+				"name": "MF_TANDEM_SEATING",
 				"description": "Two people will use the front passenger seat."
 			},
 			{
@@ -58,7 +58,7 @@
 				"description": "Creates a second exhaust by mirroring the model's exhaust over the y-axis."
 			},
 			{
-				"name": "_MF_NO1FPS_LOOK_BEHIND",
+				"name": "MF_NO_1STPERSON_LOOKBEHIND",
 				"description": "Prevents player using rear view when in first-person mode."
 			},
 			{
@@ -131,7 +131,7 @@
 			}
 		],
 		"strHandlingFlags": [{
-				"name": "_HF_SMOOTH_COMPRESN",
+				"name": "HF_SMOOTHED_COMPRESSION",
 				"description": "Simulates progressive spring suspension. Makes suspension compression motion smoother."
 			},
 			{
@@ -143,7 +143,7 @@
 				"description": "Partially enables KERS on the vehicle; disables horn and shows the recharge bar below the minimap. KERS boost itself still needs to be enabled by the SET_VEHICLE_KERS_ALLOWED native."
 			},
 			{
-				"name": "_HF_OFFROAD_ABILITY3",
+				"name": "HF_HAS_TRACKS",
 				"description": "Inverts the way grip works on the vehicle; with this flag enabled, grip starts at the fTractionCurveMin value and may increase up to the fTractionCurveMax value upon wheel slip. Grip stays at max beyond the vehicle's peak slip angle."
 			},
 			{
