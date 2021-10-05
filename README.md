@@ -35,3 +35,7 @@ On file version increment, [Real Time Handling Editor](https://www.gta5-mods.com
 ### 2.2
 
 * Add `strAdvancedFlags` `_AF_CAN_BE_STANCED` from LS Tuners and update `_AF_IGNORE_TUNED_WHEELS_CLIP` by [Wildbrick142](https://github.com/Wildbrick142)
+
+### 2.3
+
+* Update flags `MF_TANDEM_SEATING`, `MF_NO_1STPERSON_LOOKBEHIND`, `HF_SMOOTHED_COMPRESSION`, `HF_HAS_TRACKS` by [alloc8or](https://github.com/alloc8or)
