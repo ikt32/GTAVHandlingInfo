@@ -1,5 +1,5 @@
 {
-	"version":"2.3",
+	"version":"2.4",
 	"flags": {
 		"strModelFlags": [{
 				"name": "MF_IS_VAN",
@@ -390,7 +390,7 @@
 		],
 		"strAdvancedFlags": [{
 				"name": "_AF_UNKNOWN_FLAG_1",
-				"description": "???"
+				"description": "Unknown. Has something to do with revs or gears, as the sounds rev up and momentarily pause when, tested on Issi Classic, driving in a circle."
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_2",
@@ -402,7 +402,7 @@
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_4",
-				"description": "???"
+				"description": "Unknown. Seems to have a similar effect to _AF_SMOOTH_REV_1ST, but with later upshifts."
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_5",
@@ -430,7 +430,7 @@
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_11",
-				"description": "Unknown. Possibly something to do with suspension, as using this flag in combination with _AF_HANDBRAKE_WHEELIE sometimes causes the vehicle's heading to reset to 0 while performing a wheelie."
+				"description": "Unknown. Sets the clutch value to 0.0 when idling."
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_12",
@@ -505,16 +505,16 @@
 				"description": "Reduces body-roll if suspension upgrades are equipped. In addition, the vehicle gains more grip with each suspension option."
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_30",
-				"description": "Likely non-existent as of b2372."
+				"name": "_AF_HAS_SPECIAL_PERFORMANCE_MODS",
+				"description": "Requires AdvancedData to work. Adds Turbo-affecting mods for mod slot 20 (VMT_KNOB) parts, and power-affecting mods for mod slot 22 (VMT_ICE) parts."
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_31",
-				"description": "Likely non-existent as of b2372."
+				"description": "Likely non-existent as of b2545."
 			},
 			{
 				"name": "_AF_UNKNOWN_FLAG_32",
-				"description": "Likely non-existent as of b2372."
+				"description": "Likely non-existent as of b2545."
 			}
 		]
 	}
