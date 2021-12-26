@@ -39,3 +39,7 @@ On file version increment, [Real Time Handling Editor](https://www.gta5-mods.com
 ### 2.3
 
 * Update flags `MF_TANDEM_SEATING`, `MF_NO_1STPERSON_LOOKBEHIND`, `HF_SMOOTHED_COMPRESSION`, `HF_HAS_TRACKS` by [alloc8or](https://github.com/alloc8or)
+
+### 2.4
+
+* Add `strAdvancedFlags` `_AF_HAS_SPECIAL_PERFORMANCE_MODS` from The Contract and add advanced flag research notes to `_AF_UNKNOWN_FLAG_1`, `_AF_UNKNOWN_FLAG_4`, `_AF_UNKNOWN_FLAG_11` by [Wildbrick142](https://github.com/Wildbrick142)
