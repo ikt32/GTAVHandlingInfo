@@ -43,3 +43,6 @@ On file version increment, [Real Time Handling Editor](https://www.gta5-mods.com
 ### 2.4
 
 * Add `strAdvancedFlags` `_AF_HAS_SPECIAL_PERFORMANCE_MODS` from The Contract and add advanced flag research notes to `_AF_UNKNOWN_FLAG_1`, `_AF_UNKNOWN_FLAG_4`, `_AF_UNKNOWN_FLAG_11` by [Wildbrick142](https://github.com/Wildbrick142)
+
+### 2.5
+* Add all official `strAdvancedFlags` names thanks to the anonymous "100ksource"
