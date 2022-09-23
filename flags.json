@@ -450,7 +450,7 @@
 			},
 			{
 				"name": "CF_ALLOW_REDUCED_SUSPENSION_FORCE",
-				"description": "Allows the vehicle to be stanced using the _SET_LOWERED_STANCE_ENABLED native. Requires the _AF_IGNORE_TUNED_WHEELS_CLIP flag to be enabled."
+				"description": "Allows the vehicle to be stanced using the SET_REDUCED_SUSPENSION_FORCE native. Requires the CF_FIX_OLD_BUGS flag to be enabled."
 			},
 			{
 				"name": "CF_HARD_REV_LIMIT",
@@ -494,7 +494,7 @@
 			},
 			{
 				"name": "CF_FIX_OLD_BUGS",
-				"description": "Forced stock-tyre clipping boundaries, the sidewall gain/loss from a custom tyre will not matter. Refer to strHandlingFlags 00020000 above. Also prevents lowering the vehicle by shooting at its wheels/suspension. This flag is required in addition to '_AF_CAN_BE_STANCED' to stance the vehicle through script."
+				"description": "Forced stock-tyre clipping boundaries, the sidewall gain/loss from a custom tyre will not matter. Refer to strHandlingFlags 00020000 above. Also prevents lowering the vehicle by shooting at its wheels/suspension. This flag is required in addition to CF_ALLOW_REDUCED_SUSPENSION_FORCE to stance the vehicle through script."
 			},
 			{
 				"name": "CF_USE_DOWNFORCE_BIAS",
