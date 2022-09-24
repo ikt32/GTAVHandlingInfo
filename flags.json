@@ -1,5 +1,5 @@
 {
-	"version":"2.4",
+	"version":"2.5",
 	"flags": {
 		"strModelFlags": [{
 				"name": "MF_IS_VAN",
@@ -389,132 +389,132 @@
 			}
 		],
 		"strAdvancedFlags": [{
-				"name": "_AF_UNKNOWN_FLAG_1",
+				"name": "CF_DIFF_FRONT",
 				"description": "Unknown. Has something to do with revs or gears, as the sounds rev up and momentarily pause when, tested on Issi Classic, driving in a circle."
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_2",
+				"name": "CF_DIFF_REAR",
 				"description": "???"
 			},
 			{
-				"name": "_AF_ENABLE_DRIVE_BIAS_TRANSFER",
+				"name": "CF_DIFF_CENTRE",
 				"description": "When enabled, transfers the drive force from the slipping wheels to the less-driven wheels."
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_4",
+				"name": "CF_DIFF_LIMITED_FRONT",
 				"description": "Unknown. Seems to have a similar effect to _AF_SMOOTH_REV_1ST, but with later upshifts."
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_5",
+				"name": "CF_DIFF_LIMITED_REAR",
 				"description": "???"
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_6",
+				"name": "CF_DIFF_LIMITED_CENTRE",
 				"description": "???"
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_7",
+				"name": "CF_DIFF_LOCKING_FRONT",
 				"description": "Unknown. Using this flag causes the vehicle's front wheels to wheelspin if the player is holding down the handbrake and forwards/backwards keys."
 			},
 			{
-				"name": "_AF_SMOOTH_HANDBRAKE",
+				"name": "CF_DIFF_LOCKING_REAR",
 				"description": "Using the handbrake slows the car down more smoothly and, most of the time, without leaving tire marks."
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_9",
+				"name": "CF_DIFF_LOCKING_CENTRE",
 				"description": "???"
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_10",
+				"name": "CF_GEARBOX_FULL_AUTO",
 				"description": "???"
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_11",
+				"name": "CF_GEARBOX_MANUAL",
 				"description": "Unknown. Sets the clutch value to 0.0 when idling."
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_12",
+				"name": "CF_GEARBOX_DIRECT_SHIFT",
 				"description": "???"
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_13",
+				"name": "CF_GEARBOX_ELECTRIC",
+				"description": "Used by the Omnis e-GT."
+			},
+			{
+				"name": "CF_ASSIST_TRACTION_CONTROL",
 				"description": "???"
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_14",
+				"name": "CF_ASSIST_STABILITY_CONTROL",
 				"description": "???"
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_15",
-				"description": "???"
+				"name": "CF_ALLOW_REDUCED_SUSPENSION_FORCE",
+				"description": "Allows the vehicle to be stanced using the SET_REDUCED_SUSPENSION_FORCE native. Requires the CF_FIX_OLD_BUGS flag to be enabled."
 			},
 			{
-				"name": "_AF_CAN_BE_STANCED",
-				"description": "Allows the vehicle to be stanced using the _SET_LOWERED_STANCE_ENABLED native. Requires the _AF_IGNORE_TUNED_WHEELS_CLIP flag to be enabled."
-			},
-			{
-				"name": "_AF_TRACTION_CONTROL",
+				"name": "CF_HARD_REV_LIMIT",
 				"description": "Earlier upshifts, hard rev-limit per gear, low-speed traction control."
 			},
 			{
-				"name": "_AF_HOLD_GEAR_LONGER",
+				"name": "CF_HOLD_GEAR_WITH_WHEELSPIN",
 				"description": "Later upshifts; usually hits the gear's rev limit before shifting."
 			},
 			{
-				"name": "_AF_STIFFER_SPRING_SPEED",
+				"name": "CF_INCREASE_SUSPENSION_FORCE_WITH_SPEED",
 				"description": "Anti-downforce suspension; increases suspension spring force as vehicle goes faster."
 			},
 			{
-				"name": "_AF_FAKE_WHEELSPIN",
+				"name": "CF_BLOCK_INCREASED_ROT_VELOCITY_WITH_DRIVE_FORCE",
 				"description": "Generates fake wheelspin after an instance of real wheelspin; Tyres will stabilize and show 0.0m/s of slip with debugging data, but the traction behaves like it's still spinning."
 			},
 			{
-				"name": "_AF_REDUCED_RIGHTING_FORCE",
+				"name": "CF_REDUCED_SELF_RIGHTING_SPEED",
 				"description": "Reduces righting force of the vehicle, effectively making it much harder and slower to flip back on its wheels."
 			},
 			{
-				"name": "_AF_LONGER_1ST",
+				"name": "CF_CLOSE_RATIO_GEARBOX",
 				"description": "Extends the duration of the first gear, giving the vehicle a slower launch with greatly reduced wheelspin."
 			},
 			{
-				"name": "_AF_SMOOTH_REV_1ST",
+				"name": "CF_FORCE_SMOOTH_RPM",
 				"description": "Smooth first-gear revving; resistance to hitting the rev-limit."
 			},
 			{
-				"name": "_AF_NEUTRAL_STEER",
+				"name": "CF_ALLOW_TURN_ON_SPOT",
 				"description": "Allows the vehicle to be rotated left or right while parked on the spot. Intended for tanks/tracked vehicles."
 			},
 			{
-				"name": "_AF_HANDBRAKE_WHEELIE",
+				"name": "CF_CAN_WHEELIE",
 				"description": "Allows the vehicle to perform a handbrake wheelie. The Muscle vehicle class is hardcoded to use this flag."
 			},
 			{
-				"name": "_AF_REDUCE_EXT_WHEEL_COL_CLIPPING",
+				"name": "CF_ENABLE_WHEEL_BLOCKER_SIDE_IMPACTS",
 				"description": "Makes the wheels much less likely to clip into the ground when the vehicle is tipped over."
 			},
 			{
-				"name": "_AF_IGNORE_TUNED_WHEELS_CLIP",
-				"description": "Forced stock-tyre clipping boundaries, the sidewall gain/loss from a custom tyre will not matter. Refer to strHandlingFlags 00020000 above. Also prevents lowering the vehicle by shooting at its wheels/suspension. This flag is required in addition to '_AF_CAN_BE_STANCED' to stance the vehicle through script."
+				"name": "CF_FIX_OLD_BUGS",
+				"description": "Forced stock-tyre clipping boundaries, the sidewall gain/loss from a custom tyre will not matter. Refer to strHandlingFlags 00020000 above. Also prevents lowering the vehicle by shooting at its wheels/suspension. This flag is required in addition to CF_ALLOW_REDUCED_SUSPENSION_FORCE to stance the vehicle through script."
 			},
 			{
-				"name": "_AF_DOWNFORCE_KERBFIX",
+				"name": "CF_USE_DOWNFORCE_BIAS",
 				"description": "Changes the way Downforce and spoiler tuning works, uses the setup found on Open-Wheel class vehicles in the vanilla game. Each spoiler/bumper tuning has to be given AdvancedData values to affect downforce. Adjusts initial downforce from fDownforceModifier. 'Curb - boosting' seems to be nullified."
 			},
 			{
-				"name": "_AF_DECREASE_BODYROLL_TUNING",
+				"name": "CF_REDUCE_BODY_ROLL_WITH_SUSPENSION_MODS",
 				"description": "Reduces body-roll if suspension upgrades are equipped. In addition, the vehicle gains more grip with each suspension option."
 			},
 			{
-				"name": "_AF_HAS_SPECIAL_PERFORMANCE_MODS",
+				"name": "CF_ALLOWS_EXTENDED_MODS",
 				"description": "Requires AdvancedData to work. Adds Turbo-affecting mods for mod slot 20 (VMT_KNOB) parts, and power-affecting mods for mod slot 22 (VMT_ICE) parts."
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_31",
-				"description": "Likely non-existent as of b2545."
+				"name": "N/A",
+				"description": "Flag does not exist."
 			},
 			{
-				"name": "_AF_UNKNOWN_FLAG_32",
-				"description": "Likely non-existent as of b2545."
+				"name": "N/A",
+				"description": "Flag does not exist."
 			}
 		]
 	}
