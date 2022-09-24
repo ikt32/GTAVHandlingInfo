@@ -6,6 +6,10 @@ Repository to host files for various tools to use.
 
 Make a pull request for your changes, or make [an issue](https://github.com/E66666666/GTAVHandlingInfo/issues/new).
 
+Increment the version number of the relevant file in your PR, and update this readme with the changelog.
+
+Use tabs to indent.
+
 ## `flags.json`
 
 Describes the handling flags and their effects.
@@ -43,3 +47,21 @@ On file version increment, [Real Time Handling Editor](https://www.gta5-mods.com
 ### 2.4
 
 * Add `strAdvancedFlags` `_AF_HAS_SPECIAL_PERFORMANCE_MODS` from The Contract and add advanced flag research notes to `_AF_UNKNOWN_FLAG_1`, `_AF_UNKNOWN_FLAG_4`, `_AF_UNKNOWN_FLAG_11` by [Wildbrick142](https://github.com/Wildbrick142)
+
+## `notes.json`
+
+Describes the handling parameters and their effects.
+
+`description` is one string. This describes what the parameter is, and applicable units. May be an empty string, no additional description is shown.
+
+`extra` is an array of strings. This describes how the parameter works:
+
+* Top: Formula, if applicable.
+* Next: Value range/examples.
+* Bottom: Advice for choosing a decent value.
+
+`extra` may be omitted, no extra information panel is shown in that case.
+
+### 1.0
+
+* Initial version, with help from Eddlm.

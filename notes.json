@@ -1,0 +1,292 @@
+{
+	"version":"1.0",
+	"notes": {
+		"fMass" : {
+			"description" : "Vehicle mass, used for collisions with other entities. Does not affect handling. In kg."
+		},
+		"fInitialDragCoeff" : {
+			"description" : "Aerodynamic drag coefficient. Higher values give more drag, lower values give less drag.",
+			"extra":[
+				"Formula: DragCoefficientCd/10",
+				"Formula uncertain, but seems to yield realistic results."
+			]
+		},
+		"fDownforceModifier" : {
+			"description" : "Downforce applies a force on each vehicle wheel, which provides additional grip.",
+			"extra":[
+				"Adds grip, proportional to speed.",
+				"Usable range in SP: 1.0 to 100.0",
+				"No spoiler: Downforce = fDownforceModifier * 0.035.",
+				"Spoiler: Downforce = fDownforceModifier * 0.035 * 1.25.",
+				"Downforce tops out at 90% of fInitialDriveMaxFlatVel.",
+				"See gtacars.net/gta5/downforce for in-depth explanation.",
+			]
+		},
+		"fPercentSubmerged" : {
+			"description" : "How much of the car is submerged when initially hitting the water before sinking."
+		},
+		"vecCenterOfMassOffset" : {
+			"description" : "The offset of the center of mass, relative to the model center."
+		},
+		"vecInertiaMultiplier" : {
+			"description" : "Inertia multiplier"
+		},
+		"fDriveBiasFront" : {
+			"description" : "Drive bias, ranging from rear-wheel drive to front-wheel drive and AWD in between.",
+			"extra" : [
+				"1.0 is front-wheel drive.",
+				"0.0 is rear-wheel drive.",
+				"Anything between 0.9 and 0.1 is all-wheel drive, with higher values.",
+				"Values over 0.9 snap to 1.0, and values under 0.1 snap to 0.0."
+			]
+		},
+		"nInitialDriveGears" : {
+			"description" : "Number of forward gears.",
+			"extra" : [
+				"Version b1493 and older: top gear is 7.",
+				"Version b1604 and newer, top gear is 10.",
+				"Vehicles have shorter gears for gears 7 and up.",
+				"Vehicles can't properly downshift from 8th gear and up."
+			]
+		},
+		"fInitialDriveForce" : {
+			"description" : "Base (engine) torque, which is applied to the wheels.",
+			"extra": [
+				"Formula: TorqueNm/CurbWeightKg",
+				"Current gear and gear ratio affects output at the wheels.",
+				"This game uses a flat-ish torque curve, reducing torque after 80% RPM to 60% torque."
+			]
+		},
+		"fDriveInertia" : {
+			"description": "How fast the engine gains and loses revs.",
+			"extra": [
+				"This is while drive is not engaged (handbrake, or clutch/neutral).",
+				"Low values reduce acceleration, but high values may not increase acceleration beyond fInitialDriveForce capability."
+			]
+		},
+		"fClutchChangeRateScaleUpShift" : {
+			"description" : "Upshift speed. Controls the clutching rate.",
+			"extra" : [
+				"Formula: 0.9/ShiftTimeSeconds",
+				"1.0 completes a shift in 0.90 seconds",
+				"2.0 completes a shift in 0.45 seconds, etc."
+			]
+		},
+		"fClutchChangeRateScaleDownShift" : {
+			"description" : "Downshift speed. Controls the clutching rate.",
+			"extra": [
+				"See fClutchChangeRateScaleUpShift."
+			]
+		},
+		"fInitialDriveMaxFlatVel" : {
+			"description" : "Sets the speed where the (top) gear maxes out RPM.",
+			"extra" : [
+				"Formula: TopGearMaxSpeedKph*0.75",
+				"Top gear might not be the longest gear, see nInitialDriveGears for more info.",
+				"Vehicles can accelerate beyond this, or might not reach this.",
+				"fInitialDriveForce and fInitialDragCoeff impact actual top speed."
+			]
+		},
+		"fBrakeForce": {
+			"description" : "Force used to brake the wheels normally.",
+			"extra" : [
+				"Advice: Set this just high enough that wheels lock up or ABS kicks in, at full braking.",
+				"This allows analog input users to properly modulate brake input."
+			]
+		},
+		"fBrakeBiasFront": {
+			"description" : "Brake bias distribution.",
+			"extra": [
+				"1.0 only brakes the front wheels.",
+				"0.0 only brakes the rear wheels.",
+				"0.5 brakes all wheels evenly",
+				"Advice: Put this slightly in front of the weight distribution."
+			]
+		},
+		"fHandBrakeForce": {
+			"description" : "Force used to brake the rear wheels when using the hand brake.",
+			"extra" : [
+				"Advice: Set this sufficiently high, such that it always locks up the rear wheels."
+			]
+		},
+		"fSteeringLock": {
+			"description" : "Maximum steering angle, in degrees."
+		},
+		"fTractionCurveMax": {
+			"description" : "Amount of grip when the tire is not slipping.",
+			"extra": [
+				"1.0 allows for about 1g of cornering grip, etc.",
+				"Realistic values depend on what tire is simulated.",
+				"Some ballpark figures below:",
+				"90's tires: 1.15",
+				"modern eco tires: 1.22",
+				"modern street tires: 1.28",
+				"semi-slicks: 1.37",
+				"slicks (hard): 1.55",
+				"slicks (medium): 1.57",
+				"slicks (soft): 1.60"
+			]
+		},
+		"fTractionCurveMin": {
+			"description" : "Amount of grip when the tire is slipping.",
+			"extra": [
+				"Advice: Set this about 10% lower than fTractionCurveMax.",
+				"Value may be lower for old or bad tires."
+			]
+		},
+		"fTractionCurveLateral": {
+			"description" : "Optimal slip angle before grip decreases. In degrees.",
+			"extra": [
+				"Low values: fast response to steering.",
+				"High values: more gradual transition to grip loss",
+				"Realistic values depend on what wheel and tire is simulated:",
+				"Regular wheels with big sidewalls are higher, thinner tires have lower values.",
+				"Some ballpark figures below:",
+				"street tires: 9.3-8.5 degrees",
+				"semi-slicks: 7.5 degrees",
+				"slicks: 6.0 degrees"
+			]
+		},
+		"fTractionSpringDeltaMax": {
+			"description": "Max distance of the lateral sidewall travel. In meters.",
+			"extra": [
+				"Noticeable when vehicle is coming to a stop from a slide.",
+				"Effect results in a small force pulling the vehicle into the cornering direction"
+			]
+		},
+		"fLowSpeedTractionLossMult": {
+			"description" : "Artificial grip loss at low speeds.",
+			"extra" : [
+				"0.0 gives no grip loss.",
+				"Mostly noticeable when accelerating from a stop.",
+				"Advice: Turn this off (0.0) or set it very low for realistic behavior"
+			]
+		},
+		"fCamberStiffnesss": {
+			"description" : "Lateral force pushing vehicle towards its roll direction, when tires are on ground.",
+			"extra": [
+				"Negative: Uphill force",
+				"0.0: no additional force",
+				"Positive: Downhill force",
+				"Values between 0.0 and 1.0 seem most natural"
+			]
+		},
+		"fTractionBiasFront": {
+			"description" : "Distribution of traction between front and rear tires.",
+			"extra" : [
+				"1.0 or 0.0 cause wheels to disappear.",
+				"0.5 gives fronts and rear same traction.",
+				"Advice: About 0.48 gives a balanced grip distribution."
+			]
+		},
+		"fTractionLossMult": {
+			"description" : "Multiplier to grip loss caused by different surfaces and surface conditions.",
+			"extra" : [
+				"1.0: Base grip loss as defined in materials.dat."
+			]
+		},
+		"fSuspensionForce": {
+			"description": "Suspension spring force/rate.",
+			"extra": [
+				"Rockstar Games documention, unclear what it means:",
+				"1 / (Force * NumWheels) = Lower limit for zero force at full extension.",
+				"More research for formula and units required."
+			]
+		},
+		"fSuspensionCompDamp": {
+			"description": "Suspension compression damping.",
+			"extra": [
+				"Higher values make the compression harder.",
+				"Advice: fSuspensionCompDamp over half fSuspensionForce can reduce grip on compression.",
+				"Lower values cause the suspension to compress relatively more."
+			]
+		},
+		"fSuspensionReboundDamp": {
+			"description": "Suspension rebound damping.",
+			"extra": [
+				"Higher values cause the suspension to return slower.",
+				"Advice: fSuspensionReboundDamp over half fSuspensionForce stops rebound on first oscillation.",
+				"Higher values stop rebound even quicker.",
+				"Adding up fSuspensionCompDamp + fSuspensionReboundDamp to equal fSuspensionForce gives a stable ride."
+			]
+		},
+		"fSuspensionUpperLimit": {
+			"description" : "Distance suspension may compress, from the default position. In meters."
+		},
+		"fSuspensionLowerLimit": {
+			"description": "Distance suspension may extend, from the default position. In meters."
+		},
+		"fSuspensionRaise": {
+			"description" : "Distance vehicle is raised or lowered, from the default height. In meters."
+		},
+		"fSuspensionBiasFront": {
+			"description" : "Distribution of suspension force between front and rear axles.",
+			"extra" : [
+				"0.5 gives front and rear axles same force.",
+				"For multiple axles, move the distribution towards the side with less axles.",
+				"E.g. 0.7 for Dubsta 6x6."
+			]
+		},
+		"fAntiRollBarForce": {
+			"description" : "Spring force transmitting force from compressed wheel to opposite side.",
+			"extra": [
+				"Reduces body roll.",
+				"More documentation for formula required."
+			]
+		},
+		"fAntiRollBarBiasFront": {
+			"description" : "Distribution of roll bar force between front and rear.",
+			"extra" : [
+				"1.0: Only front axle has anti-roll bar.",
+				"0.0: Only rear axle has anti-roll bar.",
+				"0.5: Same anti-roll bar front and back."
+			]
+		},
+		"fRollCentreHeightFront": {
+			"description" : "Roll center height for the front axle, from the bottom of the model. In meters.",
+			"extra" : [
+				"The closer this value is placed to the center of mass height, the less body roll will occur.",
+				"Placing it higher than the center of mass results in negative body roll."
+			]
+		},
+		"fRollCentreHeightRear": {
+			"description": "Roll center height for the rear axle, from the bottom of the model. In meters.",
+			"extra": [
+				"See fRollCentreHeightFront."
+			]
+		},
+		"fCollisionDamageMult": {
+			"description" : ""
+		},
+		"fWeaponDamageMult": {
+			"description" : ""
+		},
+		"fDeformationDamageMult": {
+			"description": ""
+		},
+		"fEngineDamageMult": {
+			"description": ""
+		},
+		"fPetrolTankVolume": {
+			"description" : "Fuel tank capacity. In liters.",
+			"extra" : [
+				"Fuel tank can drain if shot, or if mods use it to simulate fuel usage.",
+				"A larger capacity takes longer to drain and/or use until depletion.",
+				"Running out of fuel causes the vehicle to slow down and stop."
+			]
+		},
+		"fOilVolume": {
+			"description" : "Engine oil capacity. In liters.",
+			"extra" : [
+				"Engine oil starts leaking if the engine if damaged below 200 health.",
+				"Below 1.25L (if capacity 5L), engine will be further damaged by low oil."
+			]
+		},
+		"vecSeatOffsetDist": {
+			"description" : ""
+		},
+		"nMonetaryValue": {
+			"description" : ""
+		}
+	}
+}
