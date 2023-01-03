@@ -19,7 +19,7 @@
 				"No spoiler: Downforce = fDownforceModifier * 0.035.",
 				"Spoiler: Downforce = fDownforceModifier * 0.035 * 1.25.",
 				"Downforce tops out at 90% of fInitialDriveMaxFlatVel.",
-				"See gtacars.net/gta5/downforce for in-depth explanation.",
+				"See gtacars.net/gta5/downforce for in-depth explanation."
 			]
 		},
 		"fPercentSubmerged" : {
