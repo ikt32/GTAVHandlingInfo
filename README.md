@@ -52,6 +52,10 @@ On file version increment, [Real Time Handling Editor](https://www.gta5-mods.com
 
 * Add all official `strAdvancedFlags` names thanks to the anonymous "100ksource"
 
+### 2.6
+
+* Update `HF_OFFROAD_ABILITIES` and related flag descriptions, add [GTACars.net](https://gtacars.net/gta5/glossary#advanced_flags) descriptions for some advanced flags.
+
 ## `notes.json`
 
 Describes the handling parameters and their effects.
